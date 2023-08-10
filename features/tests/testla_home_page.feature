@@ -10,11 +10,18 @@ Feature: verify all the elements on the home page are properly functioning
     When scroll down the page to model 3
     And clicks on explore inventory
     And add zipcode 10977
-    Then verify that user sees to
+    Then verify that user sees Model 3
 
-    Scenario:  something
-      Given user nagigates to https://www.tesla.com/inventory/new/m3
-      When add zipcode 10977
-      Then verify that user sees to
-
-
+  Scenario: verify that user sees all components
+    Given user navigate to homepage
+    When scroll down the page to model 3
+    And clicks on explore inventory
+    And add zipcode 10977
+    And user hover over model
+    And user clicks on first product listed
+    And store original window
+    And switching to Tesla Model 3 product page
+    Then verify all product components
+    And close the Model 3 product page
+    And switch back to the inventory page
+    #title, picture, price, range, speed, vehicle details...

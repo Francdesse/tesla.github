@@ -12,12 +12,11 @@ def browser_init(context, test_name):
     """
 
     #CONNECTING TO CHROME
-    # driver_path = ChromeDriverManager().install()
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service)
+    service = Service(executable_path ='/Users/francdelmonde/Tesla_project/chromedriver')
+    context.driver = webdriver.Chrome(service=service)
 
     #CONNECTING TO FIREFOX
-    context.driver = webdriver.Firefox()
+    #context.driver = webdriver.Firefox()
 
     #CONNECTING TO SAFARI
     #context.driver = webdriver.Safari()

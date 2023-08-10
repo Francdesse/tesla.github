@@ -22,7 +22,8 @@ class MainPage(Page):
         self.verify_element_text('Schedule a Demo Drive', *self.DEMO_PAGE_TITLE)
 
     def user_scroll_down(self):
-        self.driver.execute_script("window.scrollBy(0,3000")
+        #self.driver.execute_script("window.scrollBy(0,3000")
+        sleep(9)
         model3_explore_inv= self.find_element(*self.EXPLORE_INV)
         self.driver.execute_script("arguments[0].scrollIntoView();", model3_explore_inv)
         #self.driver.execute_script("window.scrollBy(0,500)","")
