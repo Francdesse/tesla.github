@@ -8,15 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 class MODEL3INVENTORYPAGE(Page):
 
     MODEL3_TITLE = (By.CSS_SELECTOR, '.results-container .result.card .tds-text--h4')
-                       #'[data-id="278_fa63d9fe83302f6484f589f28937991b-search-result-container"] h3')
-                       #"//article[@class='result card' and @data-id='278_b8af95e46257142c4f98bda77492ad1c-search-result-container']//h3[@class='tds-text--h4']")
-                       #"//article[@data-id='278_fa63d9fe83302f6484f589f28937991b-search-result-container']//h3[@class='tds-text--h4']")
-
     ZIP_ID_BOX = (By.CSS_SELECTOR, '.tds-form-input [data-id="registration-postal-code-textbox"]')
     VIEW_DETAILS = (By.CSS_SELECTOR, '.results-container.results-container--grid .result-cta-btns')
-                    #' .result-cta-btns .result-view-details-btn')
-    #('[data-id="276_3947ca605de2c37ae4d7db8ad5d4ca62-search-result-container"] .result-view-details-btn.tds-btn.tds-btn--secondary')
-
 
     def user_nav_to_link(self, site_id):
         self.open_url(site_id)
